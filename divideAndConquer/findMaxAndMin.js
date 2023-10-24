@@ -29,17 +29,13 @@ const findMaxAndMin = (arr, i, j) => {
     const recTwo = findMaxAndMin(arr, mid + 1, j);
     // 3. Combine
     // To find the final maxima - c
-    if (recOne.max_val < recTwo.max_val) {
-      max_val = recTwo.max_val;
-    } else {
-      max_val = recOne.max_val;
-    }
+    recOne.max_val < recTwo.max_val
+      ? (max_val = recTwo.max_val)
+      : (max_val = recOne.max_val);
     // To find the final minima
-    if (recOne.min_val < recTwo.min_val) {
-      min_val = recOne.min_val;
-    } else {
-      min_val = recTwo.min_val;
-    }
+    recOne.min_val < recTwo.min_val
+      ? (min_val = recOne.min_val)
+      : (min_val = recTwo.min_val);
   }
   return { max_val, min_val };
 };
