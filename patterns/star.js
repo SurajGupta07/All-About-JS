@@ -94,3 +94,35 @@ patternFive(5);
  **
  *
  */
+
+const patternSix = (n) => {
+  for (let i = n; i > 0; i--) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+      row += j;
+    }
+    console.log(row);
+  }
+};
+
+patternSix(5);
+
+/** Output:
+12345
+1234
+123
+12
+1
+ */
+
+const patternSeven = (n) => {
+  for (let i = 0; i < n; i++) {
+    let row = "";
+    for (let j = 0; j < n; j++) {
+      row += "*";
+    }
+    console.log(row);
+  }
+};
+
+patternSeven(3);
