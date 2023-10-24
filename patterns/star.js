@@ -34,3 +34,63 @@ patternTwo(6);
  ***
  ****
  */
+
+const patternThree = (n) => {
+  for (let i = 1; i <= n; i++) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+      row += j;
+    }
+    console.log(row);
+  }
+};
+
+patternThree(5);
+
+/** Output:
+1
+12
+123
+1234
+12345
+ */
+
+const patternFour = (n) => {
+  for (let i = 1; i <= n; i++) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+      row += i;
+    }
+    console.log(row);
+  }
+};
+
+patternFour(5);
+
+/** Output:
+1
+22
+333
+4444
+55555
+ */
+
+const patternFive = (n) => {
+  for (let i = n; i > 0; i--) {
+    let row = "";
+    for (let j = 0; j < i; j++) {
+      row += "*";
+    }
+    console.log(row);
+  }
+};
+
+patternFive(5);
+
+/** Output:
+ *****
+ ****
+ ***
+ **
+ *
+ */
