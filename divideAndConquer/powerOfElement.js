@@ -1,3 +1,5 @@
+//Time Complexity: O(log n)
+//Stack Space -> O(log n) -> Best/Average Case, O(n) -> Worst Case
 const findPowerOfElement = (a, n) => {
   //Small Problem
   if (n === 1) return a;
