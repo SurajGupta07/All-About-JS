@@ -25,17 +25,13 @@ const findMaxAndMin = (arr, i, j) => {
     // 1. Divide - c
     const mid = Math.floor((i + j) / 2);
     // 2. Recursion -> Conquer - 2T(n/2)
-    const recOne = findMaxAndMin(arr, i, mid);
-    const recTwo = findMaxAndMin(arr, mid + 1, j);
+    const { max_val: max1, min_val: min1 } = findMaxAndMin(arr, i, mid);
+    const { max_val: max2, min_val: min2 } = findMaxAndMin(arr, mid + 1, j);
     // 3. Combine
     // To find the final maxima - c
-    recOne.max_val < recTwo.max_val
-      ? (max_val = recTwo.max_val)
-      : (max_val = recOne.max_val);
+    max1 < max2 ? (max_val = max2) : (max_val = max1);
     // To find the final minima
-    recOne.min_val < recTwo.min_val
-      ? (min_val = recOne.min_val)
-      : (min_val = recTwo.min_val);
+    min1 < min2 ? (min_val = min1) : (min_val = min2);
   }
   return { max_val, min_val };
 };
