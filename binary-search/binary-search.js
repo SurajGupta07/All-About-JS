@@ -50,7 +50,7 @@ const recursiveBinarySearch = (arr, target, i, j) => {
 const arr = [20, 30, 40, 50, 60, 70, 80, 90];
 const x = 80;
 const i = 0;
-const j = len(arr) - 1;
+const j = arr.length - 1;
 //  function calling
 const result = recursiveBinarySearch(arr, x, i, j);
 print("Searching element is present at the location:", result);

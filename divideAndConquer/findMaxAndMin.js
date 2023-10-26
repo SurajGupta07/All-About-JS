@@ -9,7 +9,7 @@ const findMaxAndMin = (arr, i, j) => {
     // small problem - c
     // single element condition
     max_val = arr[i];
-    min_val = arr[j];
+    min_val = arr[i];
   } else if (i === j - 1) {
     // two element condition
     if (arr[i] < arr[j]) {
