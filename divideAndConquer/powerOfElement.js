@@ -7,7 +7,7 @@ const findPowerOfElement = (a, n) => {
   else {
     //Big Problem
     // Divide
-    mid = Math.floor(n / 2);
+    const mid = Math.floor(n / 2);
     //Conquer
     let leftPart = findPowerOfElement(a, mid);
     //Combine
