@@ -18,6 +18,17 @@ const partition = (arr, p, q) => {
   return i;
 };
 
+//Method definition of randomizedPartition
+const randomizedPartition = (arr, p, q) => {
+  // Generate a random pivot index between p and q
+  const randomPivotIndex = Math.floor(Math.random() * (q - p + 1)) + p;
+
+  // Swap the random index with the first index
+  [arr[p], arr[randomPivotIndex]] = [arr[randomPivotIndex], arr[p]];
+
+  return partition(arr, p, q);
+};
+
 // Method definition of QuickSort
 const quickSort = (arr, p, q) => {
   if (p < q) {
