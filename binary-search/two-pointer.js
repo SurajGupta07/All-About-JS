@@ -6,22 +6,23 @@
  * @solution : Two pointer method
  */
 
-const two_sum = (arr, target) => {
+const two_sum = (nums, target) => {
+  const newNums = new Array(...nums);
+  nums.sort((a, b) => a - b);
   let left = 0;
-  let right = arr.length - 1;
-
+  let right = nums.length - 1;
   while (left < right) {
-    if (arr[left] + arr[right] === target) {
-      return { left, right };
-    } else if (arr[left] + arr[right] < target) {
+    if (nums[left] + nums[right] === target) {
+      return [newNums.indexOf(nums[left]), newNums.lastIndexOf(nums[right])];
+    } else if (nums[left] + nums[right] < target) {
       left += 1;
     } else right -= 1;
   }
   return false;
 };
 
-const arr = [20, 40, 60, 80, 90, 120, 240];
-const target = 210;
+const arr = [3, 2, 4];
+const target = 6;
 const result = two_sum(arr, target);
 console.log(result);
 
