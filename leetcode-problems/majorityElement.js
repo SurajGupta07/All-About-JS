@@ -9,8 +9,7 @@ const isMajorityElement = (nums, candidate) => {
       count++;
     }
   }
-  if (count > Math.floor(size / 2)) return true;
-  else false;
+  return count > Math.floor(size / 2);
 };
 
 //Method defination of findCandidate
