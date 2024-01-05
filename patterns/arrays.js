@@ -34,3 +34,14 @@ const flattenArray = (arr) => {
   }, []);
 };
 flattenArray(shouldBeFlattenArr);
+
+//Reverse an Array
+const reverseArrayFn = (arr) => {
+  let reversedArrary = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    reversedArrary = reversedArrary.concat(arr[i]);
+  }
+  console.log(reversedArrary);
+};
+
+reverseArrayFn([1, 2, 3, 4, 5]);
