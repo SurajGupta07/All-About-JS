@@ -45,3 +45,40 @@ const reverseArrayFn = (arr) => {
 };
 
 reverseArrayFn([1, 2, 3, 4, 5]);
+
+// Given an array. Write a function to change all even numbers in an array to odd numbers by adding 1 to it.
+
+const arrNumbers = [1, 2, 3, 58, 5, 6, 24, 8, 15, 4];
+
+const output = arrNumbers.map((number) =>
+  number % 2 === 0 ? number + 1 : number
+);
+
+console.log(output);
+
+//Get the names in an array for only those who have a cycle.
+const family = [
+  {
+    name: "Suraj",
+    haveCycle: true,
+  },
+  {
+    name: "Mark",
+    haveCycle: false,
+  },
+  {
+    name: "Garry",
+    haveCycle: true,
+  },
+  {
+    name: "Konga",
+    haveCycle: false,
+  },
+];
+
+const cycle = family.reduce(
+  (prevValue, curValue) =>
+    curValue.haveCycle ? [...prevValue, curValue.name] : prevValue,
+  []
+);
+console.log(cycle);
