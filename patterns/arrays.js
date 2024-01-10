@@ -82,3 +82,20 @@ const cycle = family.reduce(
   []
 );
 console.log(cycle);
+
+//Chop Array
+const chopArray = (chopArr, k) => {
+  const res = chopArr.reduce((prevValue, curValue, curIndex) => {
+    const groupIndex = Math.floor(curIndex / k);
+    if (!prevValue[groupIndex]) {
+      prevValue[groupIndex] = [];
+    }
+    prevValue[groupIndex].push(curValue);
+    return prevValue;
+  }, []);
+  console.log(res);
+};
+
+const chopArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const k = 3;
+chopArray(chopArr, k);
