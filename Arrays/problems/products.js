@@ -41,5 +41,6 @@ const products = [
   "blackShirt",
   "yellowShirt",
 ];
+
 const mostFrequentProduct = findMostFrequentProduct(products);
 console.log("Most frequent product:", mostFrequentProduct);
