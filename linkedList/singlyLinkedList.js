@@ -10,17 +10,28 @@ class Node {
 let head = null;
 
 // Create a new node with the given data
-function createNode(data) {
-  return new Node(data, null);
-}
+const createNode = (data) => new Node(data, null);
 
+// Insert the new node at beginning of the Linked List
 const insertNodeAtBeginning = (data) => {
-  let newNode = createNode(data);
+  let newNode = createNode(data); // Creating new node
   newNode.next = head;
   head = newNode;
 };
 
-insertNodeAtBeginning(0);
+insertNodeAtBeginning(10);
+insertNodeAtBeginning(20);
+insertNodeAtBeginning(30);
+
+const printList = () => {
+  let temp = head;
+  while (temp) {
+    console.log(temp.data);
+    temp = temp.next;
+  }
+};
+
+printList();
 
 // Insert a node at the end of the linked list
 const insertNodeAtEnd = (data) => {
@@ -56,13 +67,3 @@ const insertAfterNode = (prevNode, newData) => {
 
 let nodeToInsertAfter = head;
 insertAfterNode(nodeToInsertAfter, 3);
-
-function printList() {
-  let temp = head;
-  while (temp) {
-    console.log(temp.data);
-    temp = temp.next;
-  }
-}
-
-printList();
