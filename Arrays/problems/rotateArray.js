@@ -33,10 +33,13 @@ console.log(leftRotation(array))
 
 const rotateArrayKPlaces = (arr, k) => {
   const rotatedArray = [];
-  for(let i = 0; i < k; i++) {
-    rotatedArray.push(arr[arr.length - i - 1])
+  const n = arr.length;
+
+  for(let i = n - k; i < n; i++) {
+    rotatedArray.push(arr[i])
   }
-  for(let i = 0; i < arr.length - k; i++) {
+
+  for(let i = 0; i < n - k; i++) {
     rotatedArray.push(arr[i])
   }
   return rotatedArray
