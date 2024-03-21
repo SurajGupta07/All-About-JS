@@ -1,6 +1,6 @@
 //Invert Key Value of Object
 
-const invertKeyValuObject = (object) => {
+const invertKeyValuObject = object => {
   let result = {};
   for (let key in object) {
     result[object[key]] = key;
@@ -8,5 +8,5 @@ const invertKeyValuObject = (object) => {
   return result;
 };
 
-const obj = { age: 12, name: "xyz", hairColor: "black" };
+const obj = { age: 12, name: 'xyz', hairColor: 'black' };
 console.log(invertKeyValuObject(obj));

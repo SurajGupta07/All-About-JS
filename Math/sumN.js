@@ -1,6 +1,6 @@
 // Sum of first N Natural Numbers
 
-const sumOfNumbers = (n) => {
+const sumOfNumbers = n => {
   let sum = 0;
   while (n > 0) {
     sum += n;

@@ -4,8 +4,8 @@
 
 const collinear = (x1, y1, x2, y2, x3, y3) => {
   if ((y2 - y1) * (x3 - x2) === (x2 - x1) * (y3 - y2)) {
-    console.log("Points are collinear");
-  } else console.log("Points are non-collinear");
+    console.log('Points are collinear');
+  } else console.log('Points are non-collinear');
 };
 
 let x1 = 1,

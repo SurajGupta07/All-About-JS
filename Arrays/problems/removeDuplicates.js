@@ -8,7 +8,7 @@ Explanation: Your function should return k = 5, with the first five elements of 
 It does not matter what you leave beyond the returned k (hence they are underscores).
 */
 
-const removeDuplicates = (nums) => {
+const removeDuplicates = nums => {
   if (nums.length === 0) return nums;
   let i = 0;
   for (let j = 1; j < nums.length; j++) {

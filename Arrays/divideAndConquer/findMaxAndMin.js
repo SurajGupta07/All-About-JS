@@ -43,5 +43,5 @@ let i = 0;
 // j indicates the ending index
 let j = arr.length - 1;
 const { max_val, min_val } = findMaxAndMin(arr, i, j);
-console.log("Maximum:", max_val);
-console.log("Minimum:", min_val);
+console.log('Maximum:', max_val);
+console.log('Minimum:', min_val);

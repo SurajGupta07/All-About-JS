@@ -5,7 +5,7 @@
 
 //Method defination of Partition Method
 const partition = (arr, p, q) => {
-  const pivotIndex = arr[p];
+  const pivotIndex = arr[p]; //50
   let i = p;
   for (let j = i + 1; j <= q; j++) {
     if (arr[j] < pivotIndex) {

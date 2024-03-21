@@ -1,4 +1,4 @@
-const numberOfWays = (n) => {
+const numberOfWays = n => {
   if (n === 0) return 0;
   else if (n === 1) return 1;
   else if (n === 2) return 2;
@@ -10,7 +10,4 @@ const numberOfWays = (n) => {
 
 const n = 7;
 const result = numberOfWays(n);
-console.log(
-  "The Number of ways a person can reach to the top of stairs is:",
-  result
-);
+console.log('The Number of ways a person can reach to the top of stairs is:', result);

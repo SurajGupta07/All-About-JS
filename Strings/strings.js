@@ -1,4 +1,4 @@
-const findFirstNonRepeatingStr = (str) => {
+const findFirstNonRepeatingStr = str => {
   let frequency = {};
 
   for (let char of str) {
@@ -11,9 +11,9 @@ const findFirstNonRepeatingStr = (str) => {
     }
   }
 
-  console.log("Non-repeating character not found");
+  console.log('Non-repeating character not found');
   return -1;
 };
 
-const res = findFirstNonRepeatingStr("teste");
+const res = findFirstNonRepeatingStr('teste');
 console.log(res);

@@ -1,7 +1,7 @@
 //Find Second Largest and Smallest Number in Array
 //Use Bubble Sort to find largest number and Selection Sort for smallest number
 
-const bubbleSort = (arr) => {
+const bubbleSort = arr => {
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length - i - 1; j++) {
       if (arr[j + 1] < arr[j]) {
@@ -12,7 +12,7 @@ const bubbleSort = (arr) => {
   return arr;
 };
 
-const findMinMax = (arr) => {
+const findMinMax = arr => {
   const sortedArray = bubbleSort(arr);
   const secondSmallestNumber = sortedArray[1];
   const secondLargestNumber = sortedArray[sortedArray.length - 2];
@@ -24,7 +24,7 @@ findMinMax(arr);
 
 //Flatten Array
 const shouldBeFlattenArr = [[1, 3], [[2, 3, [4]]], [12, 15]];
-const flattenArray = (arr) => {
+const flattenArray = arr => {
   return arr.reduce((prevValue, curValue) => {
     if (Array.isArray(curValue)) {
       return [...prevValue, flattenArray(curValue)];
@@ -36,7 +36,7 @@ const flattenArray = (arr) => {
 flattenArray(shouldBeFlattenArr);
 
 //Reverse an Array
-const reverseArrayFn = (arr) => {
+const reverseArrayFn = arr => {
   let reversedArrary = [];
   for (let i = arr.length - 1; i >= 0; i--) {
     reversedArrary = reversedArrary.concat(arr[i]);
@@ -50,36 +50,33 @@ reverseArrayFn([1, 2, 3, 4, 5]);
 
 const arrNumbers = [1, 2, 3, 58, 5, 6, 24, 8, 15, 4];
 
-const output = arrNumbers.map((number) =>
-  number % 2 === 0 ? number + 1 : number
-);
+const output = arrNumbers.map(number => (number % 2 === 0 ? number + 1 : number));
 
 console.log(output);
 
 //Get the names in an array for only those who have a cycle.
 const family = [
   {
-    name: "Suraj",
+    name: 'Suraj',
     haveCycle: true,
   },
   {
-    name: "Mark",
+    name: 'Mark',
     haveCycle: false,
   },
   {
-    name: "Garry",
+    name: 'Garry',
     haveCycle: true,
   },
   {
-    name: "Konga",
+    name: 'Konga',
     haveCycle: false,
   },
 ];
 
 const cycle = family.reduce(
-  (prevValue, curValue) =>
-    curValue.haveCycle ? [...prevValue, curValue.name] : prevValue,
-  []
+  (prevValue, curValue) => (curValue.haveCycle ? [...prevValue, curValue.name] : prevValue),
+  [],
 );
 console.log(cycle);
 

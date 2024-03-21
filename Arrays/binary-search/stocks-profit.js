@@ -5,7 +5,7 @@
  * @Question : Given an array of stock prices what is the max profit a person can make
  */
 
-const findmaxProfit = (price) => {
+const findmaxProfit = price => {
   let maxprofit = 0;
   let minPrice = Infinity;
 
@@ -21,7 +21,4 @@ const findmaxProfit = (price) => {
 
 const price = [7, 1, 5, 3, 6, 4];
 const maxProfit_value = findmaxProfit(price);
-console.log(
-  "The maximum profit of buying and selling the stocks is:",
-  maxProfit_value
-);
+console.log('The maximum profit of buying and selling the stocks is:', maxProfit_value);

@@ -1,7 +1,7 @@
 //Implementation of Insertion Sort
 //Time Complexity -> O(n^2)
 
-const insertionSort = (arr) => {
+const insertionSort = arr => {
   for (let i = 1; i < arr.length; i++) {
     let key = arr[i];
     let j;

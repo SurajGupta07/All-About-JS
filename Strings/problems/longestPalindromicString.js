@@ -1,3 +1,3 @@
-const longestPalindromicString = (str) => {};
+const longestPalindromicString = str => {};
 
-const str = "babad";
+const str = 'babad';

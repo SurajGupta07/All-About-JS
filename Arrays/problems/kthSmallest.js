@@ -28,8 +28,7 @@ const findKSmallest = (nums, kSmallestIndex, lb, ub) => {
     // *If the pivot returned i.e. the index that has been put in its correct place is returned is equivalent to k-th smallest term we return the number at that particular index.
     if (pivot === requiredIndex) return nums[kSmallestIndex - 1];
     // *If the pivot returned is actually less than that of the required smallest index then we need to search the larger side & we need to only call for pivot + 1 to upper bound.
-    else if (pivot < requiredIndex)
-      return findKSmallest(nums, kSmallestIndex, pivot + 1, ub);
+    else if (pivot < requiredIndex) return findKSmallest(nums, kSmallestIndex, pivot + 1, ub);
     // *Else we know that the pivot is greater than that of he required smallest index, then we need to search the smaller side & we need to only call for lower bound upto pivot - 1.
     else return findKSmallest(nums, kSmallestIndex, lb, pivot - 1);
   }

@@ -5,7 +5,7 @@
  * @timeComplexity : O(n^2) -> sum of number of comparisons and swaps -> no of comparisons is always n(n-1)/2, number of swaps is O(n)
  */
 
-const selectionSort = (arr) => {
+const selectionSort = arr => {
   for (let i = 0; i < arr.length; i++) {
     let minIndex = i;
     for (let j = i + 1; j < arr.length; j++) {

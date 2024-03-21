@@ -13,7 +13,7 @@ const isMajorityElement = (nums, candidate) => {
 };
 
 //Method defination of findCandidate
-const findCandidate = (nums) => {
+const findCandidate = nums => {
   let candidate = null;
   let count = 0;
 
@@ -25,12 +25,12 @@ const findCandidate = (nums) => {
   return candidate;
 };
 
-const printMajorityElement = (nums) => {
+const printMajorityElement = nums => {
   let candidate = findCandidate(nums);
   if (isMajorityElement(nums, candidate)) {
-    console.log("Majority Element is:", candidate);
+    console.log('Majority Element is:', candidate);
   } else {
-    console.log("No Majority element exsists in an array");
+    console.log('No Majority element exsists in an array');
   }
 };
 

@@ -25,7 +25,7 @@ const i1 = 0;
 const j1 = len(arr) - 1;
 //  function calling
 const result1 = binarySearch(arr1, x1, i1, j1);
-print("Searching element is present at the location:", result1);
+print('Searching element is present at the location:', result1);
 
 /**
  * @description Recursive Binary Search
@@ -41,8 +41,7 @@ const recursiveBinarySearch = (arr, target, i, j) => {
   if (i > j) return -1;
   const mid = Math.floor(i + (j - 1) / 2);
   if (arr[mid] === target) return mid;
-  else if (arr[mid] < target)
-    return recursiveBinarySearch(arr, target, mid + 1, j);
+  else if (arr[mid] < target) return recursiveBinarySearch(arr, target, mid + 1, j);
   else return recursiveBinarySearch(arr, target, i, mid - 1);
 };
 
@@ -53,4 +52,4 @@ const i = 0;
 const j = arr.length - 1;
 //  function calling
 const result = recursiveBinarySearch(arr, x, i, j);
-print("Searching element is present at the location:", result);
+print('Searching element is present at the location:', result);

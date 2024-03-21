@@ -7,4 +7,4 @@ const nTimes = (name, n) => {
   console.log(name);
   nTimes(name, n - 1);
 };
-nTimes("Suraj", 5);
+nTimes('Suraj', 5);

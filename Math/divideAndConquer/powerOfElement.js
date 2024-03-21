@@ -22,4 +22,4 @@ const a = 2;
 const n = 17;
 
 const result = findPowerOfElement(a, n);
-console.log("The power of element is:", result);
+console.log('The power of element is:', result);

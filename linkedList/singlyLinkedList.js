@@ -10,10 +10,10 @@ class Node {
 let head = null;
 
 // Create a new node with the given data
-const createNode = (data) => new Node(data, null);
+const createNode = data => new Node(data, null);
 
 // Insert the new node at beginning of the Linked List
-const insertNodeAtBeginning = (data) => {
+const insertNodeAtBeginning = data => {
   let newNode = createNode(data); // Creating new node
   newNode.next = head;
   head = newNode;
@@ -34,7 +34,7 @@ const printList = () => {
 printList();
 
 // Insert a node at the end of the linked list
-const insertNodeAtEnd = (data) => {
+const insertNodeAtEnd = data => {
   let newNode = createNode(data);
 
   if (head === null) {
@@ -56,7 +56,7 @@ insertNodeAtEnd(2);
 // Insert a node after a specific node
 const insertAfterNode = (prevNode, newData) => {
   if (prevNode === null) {
-    console.log("Given node must be available in your linked list");
+    console.log('Given node must be available in your linked list');
     return;
   }
 

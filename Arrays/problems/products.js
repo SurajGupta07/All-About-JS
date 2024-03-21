@@ -4,12 +4,12 @@
  Space Complexity -  O(n) 
 */
 
-const findMostFrequentProduct = (products) => {
+const findMostFrequentProduct = products => {
   products.sort();
 
   // Dictionary
   const productsCount = {};
-  products.forEach((product) => {
+  products.forEach(product => {
     productsCount[product] = (productsCount[product] || 0) + 1;
   });
 
@@ -32,15 +32,15 @@ const findMostFrequentProduct = (products) => {
 };
 
 const products = [
-  "yellowShirt",
-  "redHat",
-  "blackShirt",
-  "bluePants",
-  "redHat",
-  "pinkHat",
-  "blackShirt",
-  "yellowShirt",
+  'yellowShirt',
+  'redHat',
+  'blackShirt',
+  'bluePants',
+  'redHat',
+  'pinkHat',
+  'blackShirt',
+  'yellowShirt',
 ];
 
 const mostFrequentProduct = findMostFrequentProduct(products);
-console.log("Most frequent product:", mostFrequentProduct);
+console.log('Most frequent product:', mostFrequentProduct);

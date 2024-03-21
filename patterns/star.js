@@ -1,8 +1,8 @@
-const patternOne = (n) => {
+const patternOne = n => {
   for (let i = 0; i < n; i++) {
-    let row = "";
+    let row = '';
     for (let j = 0; j < n; j++) {
-      row += "*";
+      row += '*';
     }
     console.log(row);
   }
@@ -16,11 +16,11 @@ patternOne(3);
  ***
  */
 
-const patternTwo = (n) => {
+const patternTwo = n => {
   for (let i = 0; i < n; i++) {
-    let row = "";
+    let row = '';
     for (let j = 0; j < i - 1; j++) {
-      row += "*";
+      row += '*';
     }
     console.log(row);
   }
@@ -35,9 +35,9 @@ patternTwo(6);
  ****
  */
 
-const patternThree = (n) => {
+const patternThree = n => {
   for (let i = 1; i <= n; i++) {
-    let row = "";
+    let row = '';
     for (let j = 1; j <= i; j++) {
       row += j;
     }
@@ -55,9 +55,9 @@ patternThree(5);
 12345
  */
 
-const patternFour = (n) => {
+const patternFour = n => {
   for (let i = 1; i <= n; i++) {
-    let row = "";
+    let row = '';
     for (let j = 1; j <= i; j++) {
       row += i;
     }
@@ -75,11 +75,11 @@ patternFour(5);
 55555
  */
 
-const patternFive = (n) => {
+const patternFive = n => {
   for (let i = n; i > 0; i--) {
-    let row = "";
+    let row = '';
     for (let j = 0; j < i; j++) {
-      row += "*";
+      row += '*';
     }
     console.log(row);
   }
@@ -95,9 +95,9 @@ patternFive(5);
  *
  */
 
-const patternSix = (n) => {
+const patternSix = n => {
   for (let i = n; i > 0; i--) {
-    let row = "";
+    let row = '';
     for (let j = 1; j <= i; j++) {
       row += j;
     }
@@ -115,11 +115,11 @@ patternSix(5);
 1
  */
 
-const patternSeven = (n) => {
+const patternSeven = n => {
   for (let i = 0; i < n; i++) {
-    let row = "";
+    let row = '';
     for (let j = 0; j < n; j++) {
-      row += "*";
+      row += '*';
     }
     console.log(row);
   }

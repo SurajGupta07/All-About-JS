@@ -1,14 +1,14 @@
 // Given a string str, find the length of the longest substring without repeating characters.
 // Input: “ABCDEFGABEF”
 
-const longestSubstring = (str) => {
+const longestSubstring = str => {
   if (str.length === 0) {
     return 0;
   }
 
   let uniqueChars = new Set();
   let maxChars = 0;
-  let chars = "";
+  let chars = '';
   let left = 0;
   let right = 0;
 
@@ -27,5 +27,5 @@ const longestSubstring = (str) => {
   return { maxChars, chars };
 };
 
-const res = longestSubstring("ABCDEFGABEF");
+const res = longestSubstring('ABCDEFGABEF');
 console.log(res);
