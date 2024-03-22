@@ -1,7 +1,11 @@
-Array.prototype.myMap = function (logic) {
-  const arr = [];
-  for (let i = 0; i < this.length; i++) {
-    arr.push(logic(this[i]));
+Array.prototype.myMap = function (callback) {
+  let output = [];
+  for (let element of this) {
+    output.push(callback(element));
   }
-  return arr;
+  return output;
 };
+
+let arr = [1, 2, 3, 4, 5];
+let res = arr.myMap(item => item * 2);
+console.log(res);
