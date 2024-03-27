@@ -6,17 +6,16 @@
  */
 
 const findmaxProfit = price => {
-  let maxprofit = 0;
+  let maxProfit = 0;
   let minPrice = Infinity;
-
-  for (let i = 0; i < price.length; i++) {
-    if (price[i] < minPrice) {
-      minPrice = price[i];
-    } else if (price[i] - minPrice > maxprofit) {
-      maxprofit = price[i] - minPrice;
+  for (let element of price) {
+    if (element < minPrice) {
+      minPrice = element;
+    } else if (element - minPrice > maxProfit) {
+      maxProfit = element - minPrice;
     }
   }
-  return maxprofit;
+  return maxProfit;
 };
 
 const price = [7, 1, 5, 3, 6, 4];
