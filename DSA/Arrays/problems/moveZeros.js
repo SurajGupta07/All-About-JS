@@ -1,17 +1,12 @@
 const moveZeroesToEnd = arr => {
-  let sortedArr = [];
-  for (let element of arr) {
-    if (element !== 0) {
-      sortedArr.push(element);
+  let j = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== 0) {
+      [arr[j], arr[i]] = [arr[i], arr[j]];
+      j++;
     }
   }
-  for (let ele of arr) {
-    if (ele === 0) {
-      sortedArr.push(ele);
-    }
-  }
-
-  return sortedArr;
+  return arr;
 };
 
 console.log(moveZeroesToEnd([1, 0, 2, 3, 0, 4, 0, 1]));

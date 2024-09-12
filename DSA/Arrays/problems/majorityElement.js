@@ -4,8 +4,8 @@
 const isMajorityElement = (nums, candidate) => {
   let count = 0;
   let size = nums.length;
-  for (let i = 0; i < nums.length; i++) {
-    if (candidate === nums[i]) {
+  for (let ele of nums) {
+    if (candidate === ele) {
       count++;
     }
   }
