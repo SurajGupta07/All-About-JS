@@ -1,15 +1,9 @@
 const maxConsecutiveOnes = arr => {
   let count = 0;
   let maxCount = 0;
-  for (let element of arr) {
-    if (arr[element] === 1) {
-      count++;
-      if (count > maxCount) {
-        maxCount = count;
-      }
-    } else {
-      count = 0;
-    }
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] === 1 ? count++ : (count = 0);
+    maxCount = Math.max(maxCount, count);
   }
   return maxCount;
 };
