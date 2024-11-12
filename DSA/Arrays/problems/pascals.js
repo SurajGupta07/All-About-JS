@@ -13,3 +13,17 @@ const pascalsTriangle = number => {
 };
 
 console.log(pascalsTriangle(5));
+
+var beautySum = function (s) {
+  let count = 0
+  let subStr = []
+  for (let i = count+1; i < s.length+1; i++) {
+      subStr.push(s.slice(count,i))
+      console.log(i,s.length)
+      if(i===s.length-1){
+          count++
+      }
+  }
+  console.log(subStr,count)
+};
+

@@ -1,14 +1,15 @@
 const isomorphic = (s, t) => {
   if (s.length !== t.length) return false;
-  const obj = {};
+  const sMap = {};
+  const tMap = {};
   for (let i = 0; i < s.length; i++) {
     const charS = s[i];
     const charT = t[i];
-    if (obj[charS] === undefined) {
-      obj[charS] = charT;
-    } else if (obj[charS] !== charT) {
+    if ((charS in sMap && sMap[charS] !== charT) || (charT in tMap && tMap[charT] !== charS)) {
       return false;
     }
+    sMap[charS] = charT;
+    tMap[charT] = charS;
   }
   return true;
 };
@@ -16,3 +17,4 @@ const isomorphic = (s, t) => {
 console.log(isomorphic('egg', 'add'));
 console.log(isomorphic('foo', 'bar'));
 console.log(isomorphic('paper', 'title'));
+console.log(isomorphic('badc', 'baba'));
